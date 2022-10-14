@@ -46,10 +46,22 @@ require __DIR__.'/../vendor/autoload.php';
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
+
 $kernel = $app->make(Kernel::class);
+
+
 
 $response = $kernel->handle(
     $request = Request::capture()
-)->send();
+);
 
+// pake dd (dump) ini untuk tahu proses dari mana kemananya 
+// class kernel(menggunakan handle method)->menghandle Request::capture(ini gambaran keseluruhan proses request)->direspon dengan content (resourcenya sudah dapat sesuai route & view)
+// dd($response);
+
+// dd(app());
+
+$response->send();
+
+// terminate(sudahi) jika object tidak terpakai atau browser di tutup atau resource sudah di terima
 $kernel->terminate($request, $response);
