@@ -187,6 +187,8 @@ return [
          */
         
         Intervention\Image\ImageServiceProvider::class,
+
+        Barryvdh\Debugbar\ServiceProvider::class,
         
 
 
@@ -215,6 +217,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
 
         // 'Image' => Intervention\Image\Facades\Image::class
+        'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
 
     ])->toArray(),
 
