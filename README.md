@@ -2,7 +2,7 @@
 
 ## About Larablog
 
-This is tiny project for  laravel learning with simplest project process as use to be.
+This is tiny project for learning laravel with simplest project process.
 
 
 ## How to run
